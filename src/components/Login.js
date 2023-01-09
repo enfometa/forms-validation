@@ -26,7 +26,7 @@ function Login() {
     }
   };
   return (
-    <div className="login">
+    <div className="contents">
       <div>Login form</div>
       <EmFormGroup emForms={forms}>
         <div>
@@ -51,8 +51,8 @@ function Login() {
         </div>
       </EmFormGroup>
 
-      <div>
-        <button className="btn-login" onClick={login}>
+      <div className="btn-submit-container">
+        <button className="btn-submit" onClick={login}>
           Login
         </button>
       </div>

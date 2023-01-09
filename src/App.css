@@ -11,19 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.login {
-  text-align: center;
-  margin-top: 100px;
+.container {
+  padding-left: 600px;
 }
 
-.login .form {
-  width: 30%;
+.contents {
+  text-align: center;
+  margin-top: 100px;
+  width: 600px;
+  text-align: left;
+}
+
+.contents .form {
+  width: 100%;
   margin-top: 20px;
   height: 30px;
   font-size: medium;
 }
 
-.btn-login {
+.contents .chk {
+  margin-top: 20px;
+  height: 30px;
+  width: 30px;
+  font-size: medium;
+}
+
+.btn-submit-container {
+  text-align: center;
+}
+
+.btn-submit {
   margin-top: 10px;
   height: 30px;
 }
