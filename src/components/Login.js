@@ -14,7 +14,7 @@ function Login() {
       {
         name: "password",
         value: "",
-        validators: [{ name: "required", func: required, message: "Password is required" }],
+        validators: [{ name: "required", func: required, message: "Password is required", param: {acceptsWhiteSpace: true} }],
       },
     ],
   });

@@ -26,12 +26,23 @@ function Profile() {
         ],
       },
       {
+        name: "details",
+        value: "",
+        validators: [
+          { name: "required", func: required, message: "Details are required" },
+        ],
+      },
+      {
         name: "active",
         value: true,
         validators: [],
       },
     ],
   });
+
+  const onChangeName = (e) => {
+    console.log(e)
+  }
 
   const update = () => {
     if (forms.validate()) {
@@ -45,7 +56,7 @@ function Profile() {
       <EmFormGroup emForms={forms}>
         <div>
           <EmForm formName="name">
-            <input type="text" name="name" placeholder="Full name" className="form" />
+            <input type="text" name="name" placeholder="Full name" className="form" onChange={onChangeName}/>
           </EmForm>
           <div className="error-message">
             <EmFormErrorMessage formName="name" validatorName="required" />
@@ -68,6 +79,14 @@ function Profile() {
             <EmFormErrorMessage formName="age" validatorName="required" />
             <EmFormErrorMessage formName="age" validatorName="number" />
             <EmFormErrorMessage formName="age" validatorName="range" />
+          </div>
+        </div>
+        <div>
+          <EmForm formName="details">
+            <textarea placeholder="Details" className="form" style={{height: 60}} rows="5"></textarea>
+          </EmForm>
+          <div className="error-message">
+            <EmFormErrorMessage formName="details" validatorName="required" />
           </div>
         </div>
         <div>
