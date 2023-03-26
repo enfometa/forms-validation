@@ -1,4 +1,4 @@
-import { email, EmForm, EmFormErrorMessage, EmFormGroup, required, useEmForms } from "@enfometa/em-forms";
+import { email, EmFormControl, EmFormErrorMessage, EmFormGroup, required, useEmForms } from "@enfometa/em-forms";
 
 function Login() {
   const forms = useEmForms({
@@ -30,21 +30,18 @@ function Login() {
       <div>Login form</div>
       <EmFormGroup emForms={forms}>
         <div>
-          <EmForm formName="email">
+          <EmFormControl formName="email">
             <input type="email" name="email" placeholder="Email" className="form" />
-          </EmForm>
-          {/* <EmFormError formName="email" validatorName="required">
-            <div>This is a custom error message</div>
-          </EmFormError> */}
+          </EmFormControl>
           <div className="error-message">
             <EmFormErrorMessage formName="email" validatorName="required" />
             <EmFormErrorMessage formName="email" validatorName="email" />
           </div>
         </div>
         <div>
-          <EmForm formName="password">
+          <EmFormControl formName="password">
             <input type="password" name="pswd" placeholder="Password" className="form" />
-          </EmForm>
+          </EmFormControl>
           <div className="error-message">
             <EmFormErrorMessage formName="password" validatorName="required" />
           </div>

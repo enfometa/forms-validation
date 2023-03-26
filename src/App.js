@@ -3,9 +3,9 @@ import "./App.css";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 
-emFormsGlobalConfig.registerEmFormElements([
+emFormsGlobalConfig.registerEmFormControls([
   {
-    elements: [{ type: "input", props: { type: "checkbox" } }],
+    controls: [{ type: "input", props: { type: "checkbox" } }],
     valueFunc: (e) => e.target.checked,
     valuePropName: "checked",
   },

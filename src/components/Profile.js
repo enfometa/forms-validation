@@ -1,4 +1,4 @@
-import { email, EmForm, EmFormErrorMessage, EmFormGroup, number, range, required, useEmForms } from "@enfometa/em-forms";
+import { email, EmFormControl, EmFormErrorMessage, EmFormGroup, number, range, required, useEmForms } from "@enfometa/em-forms";
 
 function Profile() {
   const forms = useEmForms({
@@ -55,26 +55,26 @@ function Profile() {
       <div>Update profile</div>
       <EmFormGroup emForms={forms}>
         <div>
-          <EmForm formName="name">
+          <EmFormControl formName="name">
             <input type="text" name="name" placeholder="Full name" className="form" onChange={onChangeName}/>
-          </EmForm>
+          </EmFormControl>
           <div className="error-message">
             <EmFormErrorMessage formName="name" validatorName="required" />
           </div>
         </div>
         <div>
-          <EmForm formName="email">
+          <EmFormControl formName="email">
             <input type="email" name="email" placeholder="Email" className="form" />
-          </EmForm>
+          </EmFormControl>
           <div className="error-message">
             <EmFormErrorMessage formName="email" validatorName="required" />
             <EmFormErrorMessage formName="email" validatorName="email" />
           </div>
         </div>
         <div>
-          <EmForm formName="age">
+          <EmFormControl formName="age">
             <input type="text" name="age" placeholder="Age" className="form" />
-          </EmForm>
+          </EmFormControl>
           <div className="error-message">
             <EmFormErrorMessage formName="age" validatorName="required" />
             <EmFormErrorMessage formName="age" validatorName="number" />
@@ -82,18 +82,18 @@ function Profile() {
           </div>
         </div>
         <div>
-          <EmForm formName="details">
+          <EmFormControl formName="details">
             <textarea placeholder="Details" className="form" style={{height: 60}} rows="5"></textarea>
-          </EmForm>
+          </EmFormControl>
           <div className="error-message">
             <EmFormErrorMessage formName="details" validatorName="required" />
           </div>
         </div>
         <div>
           <label htmlFor="active">Active</label>
-          <EmForm formName="active">
+          <EmFormControl formName="active">
             <input id="active" type="checkbox" name="active" className="chk" />
-          </EmForm>
+          </EmFormControl>
         </div>
       </EmFormGroup>
 
